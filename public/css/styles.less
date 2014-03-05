@@ -167,7 +167,7 @@ body {
     list-style-type: none;
 
     li {
-      padding: 3px 0;
+      padding: 8px 0;
 
       &.headers {
         border-bottom: 2px solid #ecf0f1;
@@ -193,6 +193,10 @@ body {
           }
         }
 
+        .vote-count-wrapper {
+          margin-top: -3px;
+        }
+
         .summary {
           color: rgba(0, 0, 0, 0.65);
         }
@@ -207,15 +211,27 @@ body {
           margin: 0 5px 0 0;
         }
 
+        .upvote-wrapper {
+          float: left;
+          margin-right: 20px;
+          margin-top: -1px;
+          width: 1%;
+          white-space: nowrap;
+        }
+
         .upvote-form {
           display: inline-block;
           position: relative;
-          left: 50%;
-          margin-left: -15px;
 
           .upvote {
             border: none;
             background: none;
+            padding: 0 4px;
+
+            &.voted {
+              color: #ddd !important;
+            }
+
             &:hover {
               color: #18bc9c;
             }
@@ -223,6 +239,7 @@ body {
         }
       }
     }
+
     @media (max-width: 767px) {
       li.news-item {
         position: relative;
@@ -439,11 +456,11 @@ body {
 }
 
 #chat {
-  position: absolute; 
-  top:45px; 
+  position: absolute;
+  top:45px;
   bottom:75px;
 
-  iframe { 
+  iframe {
     height:100%; width:100%; border: 0
   }
 }

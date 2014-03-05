@@ -18,6 +18,6 @@ gulp.task('mocha-tests', function () {
     gulp.src(paths.tests)
         .pipe(mocha({reporter: 'spec'}));
 });
-  
+
 gulp.task('test', ['jshint', 'mocha-tests']);
 gulp.task('default', ['test']);
